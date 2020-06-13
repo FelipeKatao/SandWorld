@@ -1,0 +1,7 @@
+#char{
+    height: 4vh;
+    width: 4vh;
+    background-color: red;
+    margin-top: 20vh;
+    position: relative;
+}
