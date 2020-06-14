@@ -7,8 +7,8 @@ document.addEventListener("keydown",(event)=>{
         charTarget.style.backgroundColor="blue";
         actualPos+=3;
     }
-    if(event.keyCode==37){
-       charTarget.style.left=  actualPos*-1+'px';
+    if(event.keyCode==38){
+       charTarget.style.left=  (actualPos*-1)+'px';
        charTarget.style.backgroundColor="red";
        actualPos+=3;
     }
