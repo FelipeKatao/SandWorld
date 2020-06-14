@@ -6,5 +6,6 @@ document.addEventListener("keydown",(event)=>{
         charTarget.style.left=  actualPos+'px';
         charTarget.style.backgroundColor="blue";
         actualPos+=3;
+        console.log(actualPos)
     }
 })
