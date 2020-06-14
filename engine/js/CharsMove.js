@@ -9,7 +9,7 @@ document.addEventListener("keydown",(event)=>{
     }
     if(event.keyCode==37){
        charTarget.style.left=  actualPos*-1+'px';
-       charTarget.style.backgroundColor="blue";
+       charTarget.style.backgroundColor="red";
        actualPos+=3;
     }
 })
