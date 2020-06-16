@@ -1,3 +1,7 @@
+//Criar a movimentação dos personagens
+let hero = new charsMove(30,4,4,3544,-1376,244,-1196)
+hero.addMoveKeyboards("char")
+
 //Criar os contrutores do game
 let npc1= new NpcObject("npc1","npc1",10)
 npc1.modifymoveTimes(30,20)
