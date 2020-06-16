@@ -1,25 +1,25 @@
-class charsMove{  
-    constructor(speed,rateY,rateX,limitX_left,limitX_rigth,limitY_down,limitY_up){
-        this.speed=speed
-        this.rateY=rateY
-        this.rateX=rateX
-        this.limitX_left=limitX_left
-        this.limitX_rigth=limitX_rigth
-        this.limitY_down=limitY_down
-        this.limitY_up=limitY_up
+class charsMove {
+
+    constructor(speed, rateY, rateX, limitX_left, limitX_rigth, limitY_down, limitY_up) {
+        this.speed = speed
+        this.rateY = rateY
+        this.rateX = rateX
+        this.limitX_left = limitX_left
+        this.limitX_rigth = limitX_rigth
+        this.limitY_down = limitY_down
+        this.limitY_up = limitY_up
     }
-    //speed = 30;
-    //rateY = 4;
-    //rateX = 4;
-    //limitX_left = 3544  
-    //limitX_rigth = -1376
-    //limitY_down = 244
-    //limitY_up = -1196    
-    addMoveKeyboards(targetMove){
+
+    posCharMove(posX,PosY,targetMove){
+        document.getElementById(targetMove).style.left=posX+'px'
+        document.getElementById(targetMove).style.top=PosY+'px'
+    }
+
+    addMoveKeyboards(targetMove) {
         let charTarget = document.getElementById(targetMove)
         document.addEventListener("keydown", (event) => {
-            //const keyname = event.key;
-            console.log("X: " + this.rateX + "   Y:" + this.rateY)
+            const keyname = event.key;
+            //console.log("X: " + this.rateX + "   Y:" + this.rateY)
             if (event.keyCode == 39) {
                 this.rateX += this.speed
                 if (this.rateX <= this.limitX_left) {
@@ -57,7 +57,7 @@ class charsMove{
                 }
             }
         })
-                
+
     }
 }
 
