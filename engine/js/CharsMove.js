@@ -8,7 +8,7 @@ var limitY_down=244
 var limitY_up=-1196
 document.addEventListener("keydown",(event)=>{
     const keyname = event.key;
-
+    console.log("X: "+rateX+"   Y:"+rateY)
     if(event.keyCode==39){
         rateX+=speed
         if(rateX<=limitX_left){
