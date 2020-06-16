@@ -1,7 +1,48 @@
+
 #char{
     height: 4vh;
     width: 4vh;
     background-color: red;
-    margin-top: 20vh;
+    position: absolute;
+    margin-top: 4vh;
+}
+#npc1{
+    height: 4vh;
+    width: 4vh;
+    background-color: green;
+    left:0;
+    top:0;
+    margin-top: 10vh;
+    margin-left: 60vh;
+    position: relative;
+}
+#npc2{
+    height: 4vh;
+    width: 4vh;
+    background-color: green;
+    left:0;
+    top:0;
+    margin-top: 10vh;
+    margin-left: 10vh;
+    position: relative;
+}
+#npc3{
+    height: 4vh;
+    width: 4vh;
+    background-color: green;
+    left:0;
+    top:0;
+    margin-top: 10vh;
+    margin-left: 50vh;
+    position: relative;
+}
+#npc4{
+    height: 4vh;
+    width: 4vh;
+    background-color: green;
+    left:0;
+    top:0;
+    margin-top: 30vh;
+    margin-left: 10vh;
     position: relative;
 }

@@ -1,15 +1,24 @@
 var charTarget= document.getElementById("char")
-var actualPos = 3;
+var speed = 30;
+var rateY=4;
+var rateX=4;
 document.addEventListener("keydown",(event)=>{
     const keyname = event.key;
+
     if(event.keyCode==39){
-        charTarget.style.left=  actualPos+'px';
-        charTarget.style.backgroundColor="blue";
-        actualPos+=3;
+        rateX+=speed
+        charTarget.style.left=rateX+'px'
+    }
+    if(event.keyCode==37){
+        rateX-=speed
+        charTarget.style.left=rateX+'px'
+    }
+    if(event.keyCode==40){
+        rateY+=speed
+        charTarget.style.top= rateY+'px'
     }
     if(event.keyCode==38){
-       charTarget.style.left=  (actualPos*-1)+'px';
-       charTarget.style.backgroundColor="red";
-       actualPos+=3;
+        rateY-=speed
+        charTarget.style.top=rateY+'px'
     }
 })
