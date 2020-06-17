@@ -14,6 +14,11 @@ class charsMove {
         document.getElementById(targetMove).style.left=posX+'px'
         document.getElementById(targetMove).style.top=PosY+'px'
     }
+    
+    move_left=true
+    move_right=true
+    move_down=true
+    move_up=true
 
     addMoveKeyboards(targetMove) {
         let charTarget = document.getElementById(targetMove)

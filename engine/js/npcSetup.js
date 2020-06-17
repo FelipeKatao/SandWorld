@@ -1,4 +1,3 @@
-
 class NpcObject {
     constructor(nameNpc, npcTarget, speed) {
         this.name = nameNpc
@@ -14,6 +13,10 @@ class NpcObject {
         this.limitsX = [Xright, Xleft]
         this.limitsY = [Yup, Ydown]
     }
+    move_left=true
+    move_right=true
+    move_down=true
+    move_up=true
     moveNpc() {
         let Direction = Math.floor(Math.random() * 6)
         if (Direction == 1) {

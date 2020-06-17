@@ -17,8 +17,10 @@ npc2.limitsAreaNpc(300, -690, -94, 1010)
 npc3.limitsAreaNpc(300, -690, -94, 1010)
 npc4.limitsAreaNpc(300, -690, -94, 1010)
 
+let col=new ColiderObjs()
 setInterval(gameLoop, 33);
 function gameLoop() {
+    col.newCreateColider("char","npc4",teste)
 }
 
 setInterval(NpcFunctions, 60)
@@ -27,6 +29,9 @@ function NpcFunctions() {
     npc1.moveXNpc()
     npc2.moveYNpc()
     npc3.moveXNpc()
-    npc4.moveYNpc()
+   // npc4.moveYNpc()
 }
 
+function teste(){
+    document.getElementById("char").style.backgroundColor="blue"
+}
