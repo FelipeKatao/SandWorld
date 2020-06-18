@@ -1,19 +1,19 @@
 class ColiderObjs{
-    createColider(objColider,objCol){
-    }
-    newCreateColider(objColider,objCol,actionFunction){
-        let objX=document.getElementById(objColider).getBoundingClientRect().left 
-        let objY=document.getElementById(objColider).getBoundingClientRect().top
-        let obj1X=document.getElementById(objCol).getBoundingClientRect().left
-        let obj1Y=document.getElementById(objCol).getBoundingClientRect().top
-        
-        console.log("ObjColider x,y: "+objX+" ; "+objY)
-        console.log("ObjCol x,y: "+obj1X+" ; "+obj1Y)
-        if(obj1Y==objY && obj1X-objX>10){
+    newCreateColider(objColider,objCol,actionFunction,elseFunction){
+        let posObj=document.getElementById(objColider);
+        let posObjRect=posObj.getBoundingClientRect()
+        let posObj2=document.getElementById(objCol)
+        let posObj2Rect=posObj2.getBoundingClientRect()
+        if(posObjRect.top<posObj2Rect.top+posObj2.offsetWidth
+            && posObjRect.top+posObj2.offsetWidth>posObj2Rect.top
+            && posObjRect.left<posObj2Rect.left+posObj2.offsetHeight
+            && posObjRect.left+posObj.offsetHeight>posObj2Rect.left
+            ) 
+        {
             actionFunction()
         }
-        if(obj1Y==objY && obj1X-objX>100){
-            actionFunction()
+        else{
+            elseFunction()
         }
     }
 }

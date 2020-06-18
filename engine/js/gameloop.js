@@ -18,9 +18,10 @@ npc3.limitsAreaNpc(300, -690, -94, 1010)
 npc4.limitsAreaNpc(300, -690, -94, 1010)
 
 let col=new ColiderObjs()
+let col2 = new ColiderObjs()
 setInterval(gameLoop, 33);
 function gameLoop() {
-    col.newCreateColider("char","npc4",teste)
+    col.newCreateColider("char","npc4",teste,teste2)
 }
 
 setInterval(NpcFunctions, 60)
@@ -33,5 +34,8 @@ function NpcFunctions() {
 }
 
 function teste(){
-    document.getElementById("char").style.backgroundColor="blue"
+    document.getElementById("char").style.backgroundColor="yellow"
+}
+function teste2(){
+    document.getElementById("char").style.backgroundColor="red"
 }
