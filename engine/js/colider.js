@@ -10,10 +10,10 @@ class ColiderObjs{
             && posObjRect.left+posObj.offsetHeight>posObj2Rect.left
             ) 
         {
-            actionFunction()
+           return true
         }
         else{
-            elseFunction()
+            return false
         }
     }
 }

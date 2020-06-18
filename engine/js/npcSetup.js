@@ -13,6 +13,7 @@ class NpcObject {
         this.limitsX = [Xright, Xleft]
         this.limitsY = [Yup, Ydown]
     }
+    
     move_left=true
     move_right=true
     move_down=true
