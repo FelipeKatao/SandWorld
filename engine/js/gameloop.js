@@ -18,27 +18,42 @@ npc3.limitsAreaNpc(300, -690, -94, 1010)
 npc4.limitsAreaNpc(300, -690, -94, 1010)
 
 let col=new ColiderObjs()
-let col2=new ColiderObjs()
 
 setInterval(gameLoop, 33);
 function gameLoop() {
     npc1.moveXNpc()
     npc2.moveYNpc()
+    npc2.moveXNpc()
+    npc2.moveYNpc()
+    npc3.moveXNpc()
+    npc4.moveYNpc()
 }
 
 setInterval(gameLoop2, 40);
 function gameLoop2() {
-    if(col.newCreateColider("char","npc4",teste,teste)){
+    if(col.newCreateColider("char","npc4")){
        teste()
     }
-    if(col.newCreateColider("char","npc3",teste,teste)){
+    if(col.newCreateColider("char","npc3")){
         teste()
     }
-    if(col.newCreateColider("char","npc1",teste,teste)){
+    if(col.newCreateColider("char","npc1")){
         teste()
     }   
-    if(col.newCreateColider("char","npc2",teste,teste)){
+    if(col.newCreateColider("char","npc2")){
         teste()
+    }
+    if(col.newCreateColider("char","col0")){
+        hero.move_up=false
+    }
+    else{
+        hero.move_up=true
+    }
+    if(col.newCreateColider("char","col1")){
+        hero.move_left=false
+    }
+    else{
+        hero.move_left=true
     }
 
 }

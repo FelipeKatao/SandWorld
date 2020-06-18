@@ -1,5 +1,5 @@
 class ColiderObjs{
-    newCreateColider(objColider,objCol,actionFunction,elseFunction){
+    newCreateColider(objColider,objCol){
         let posObj=document.getElementById(objColider);
         let posObjRect=posObj.getBoundingClientRect()
         let posObj2=document.getElementById(objCol)
