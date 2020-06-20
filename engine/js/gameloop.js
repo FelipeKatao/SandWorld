@@ -21,12 +21,22 @@ let col=new ColiderObjs()
 
 setInterval(gameLoop, 33);
 function gameLoop() {
+    if(col.newCreateColider("char","block")==true){
+        if(hero.move_detect="left"){
+            hero.move_right=false
+        }
+        else{
+            hero.move_right=true
+        }
+    }
+     document.getElementById("char").style.backgroundColor="red"
     npc1.moveXNpc()
     npc2.moveYNpc()
     npc2.moveXNpc()
     npc2.moveYNpc()
     npc3.moveXNpc()
     npc4.moveYNpc()
+    //console.log(hero.rateX+" "+hero.rateY)
 }
 
 setInterval(gameLoop2, 40);
@@ -42,18 +52,6 @@ function gameLoop2() {
     }   
     if(col.newCreateColider("char","npc2")){
         teste()
-    }
-    if(col.newCreateColider("char","col0")){
-        hero.move_up=false
-    }
-    else{
-        hero.move_up=true
-    }
-    if(col.newCreateColider("char","col1")){
-        hero.move_left=false
-    }
-    else{
-        hero.move_left=true
     }
 
 }

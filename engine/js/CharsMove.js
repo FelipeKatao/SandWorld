@@ -19,16 +19,18 @@ class charsMove {
     move_right=true
     move_down=true
     move_up=true
+    move_detect=""
 
     addMoveKeyboards(targetMove) {
         let charTarget = document.getElementById(targetMove)
         document.addEventListener("keydown", (event) => {
             const keyname = event.key;
             //console.log("X: " + this.rateX + "   Y:" + this.rateY)
-            if (event.keyCode == 39) {
+            if (event.keyCode == 39 && this.move_right==true) {
                 this.rateX += this.speed
                 if (this.rateX <= this.limitX_left) {
                     charTarget.style.left = this.rateX + 'px'
+                    this.move_detect="left"
                 }
                 else {
                     this.rateX -= this.speed
