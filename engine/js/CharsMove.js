@@ -45,7 +45,7 @@ class charsMove {
                     this.rateX += this.speed
                 }
             }
-            if (event.keyCode == 40) {
+            if (event.keyCode == 40 && this.move_down==true) {
                 this.rateY += this.speed
                 if (this.rateY <= this.limitY_down) {
                     charTarget.style.top = this.rateY + 'px'

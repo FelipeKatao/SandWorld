@@ -4,6 +4,7 @@
     width: 190vh;
     margin: auto;
     margin-top: 10vh;
+    position: absolute;
 }
 #char{
     height: 4vh;

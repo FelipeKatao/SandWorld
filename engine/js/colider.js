@@ -1,4 +1,5 @@
 class ColiderObjs{
+    //sistema legado//
     newCreateColider(objColider,objCol){
         let posObj=document.getElementById(objColider);
         let posObjRect=posObj.getBoundingClientRect()
